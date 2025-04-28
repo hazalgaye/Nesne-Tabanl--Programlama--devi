@@ -2,7 +2,7 @@ class Hasta:
     def __init__(self, isim, tc):
         self.isim = isim
         self.tc = tc
-        self.randevu = None  # Bir hastanın sadece bir randevusu olabilir
+        self.randevu = None  # Bir hastanın sadece bir randevusu ol
 
 class Doktor:
     def __init__(self, isim, uzmanlik):
