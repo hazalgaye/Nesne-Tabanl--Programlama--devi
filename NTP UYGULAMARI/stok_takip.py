@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QMessageBox, QTextEdit
 
 class Urun:
-    def _init_(self, ad, stok):
+    def __init__(self, ad, stok):
         self.ad = ad
         self.stok = stok
 
@@ -9,8 +9,8 @@ class Urun:
         self.stok += miktar
 
 class StokSistemi(QWidget):
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
         self.setWindowTitle("Stok Takip Sistemi")
         self.urunler = {}
 
@@ -83,7 +83,7 @@ class StokSistemi(QWidget):
             for urun in self.urunler.values():
                 self.stok_text.append(f"Ürün: {urun.ad} - Stok: {urun.stok}")
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     app = QApplication([])
     pencere = StokSistemi()
     pencere.show()
