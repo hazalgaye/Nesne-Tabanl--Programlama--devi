@@ -1,8 +1,9 @@
+
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit, QPushButton, QTextEdit
 
 # Seyahat Sınıfı
 class Seyahat:
-    def _init_(self, ad):
+    def __init__(self, ad):
         self.ad = ad
         self.rotalar = []
         self.konaklamalar = []
@@ -25,19 +26,19 @@ class Seyahat:
 
 # Rota Sınıfı
 class Rota:
-    def _init_(self, detaylar):
+    def __init__(self, detaylar):
         self.detaylar = detaylar
 
 # Konaklama Sınıfı
 class Konaklama:
-    def _init_(self, tesis_adi, fiyat):
+    def __init__(self, tesis_adi, fiyat):
         self.tesis_adi = tesis_adi
         self.fiyat = fiyat
 
 # Ana Uygulama Penceresi
 class SeyahatUygulamasi(QWidget):
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
 
         self.seyahatler = []
 
